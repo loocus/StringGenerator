@@ -26,7 +26,7 @@ func generateInt(length int) string {
 } 
 
 func main() {
-    rand.Seed(time.Now().UnixNano())
+    rand.Seed(time.Now().UnixNano()) //idk why but if i do that, the password generation is more faster
 
     fmt.Println(generateString(4) + generateInt(2))
 }
