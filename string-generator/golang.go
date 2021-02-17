@@ -30,3 +30,4 @@ func main() {
 
     fmt.Println(generateString(4) + generateInt(2))
 }
+//Today : 17/02/2021, I will greatly optimize the code
