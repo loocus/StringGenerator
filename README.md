@@ -15,10 +15,17 @@ If you want to take part in this fun little project, don't hesitate to make pull
 ```php
 <?php
 
-$letter = substr(str_shuffle(str_repeat($x = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",  ceil(4 / strlen($x)))), 1, 4);
-$number = substr(str_shuffle(str_repeat($x = "0123456789",  ceil(2 / strlen($x)))), 1, 2);
+function randomString() {
+	$result = '';
+	$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
 
-echo $letter + $number;
+	for ($i = 0; $i < 6; $i++) {
+		$result .= $characters[rand(0, strlen($characters))];
+	}
+	return $result;
+}
+
+echo randomString();
 ```
 
 ## TODO
